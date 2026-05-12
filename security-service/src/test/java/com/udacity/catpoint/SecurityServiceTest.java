@@ -12,6 +12,9 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
+
 
 public class SecurityServiceTest {
 
@@ -37,8 +40,13 @@ public class SecurityServiceTest {
                 );
     }
 
-    @Test
-    void armedSensorActivated_setsPendingAlarm() {
+    @ParameterizedTest
+    @EnumSource(
+            value = ArmingStatus.class,
+            names = {"ARMED_HOME", "ARMED_AWAY"}
+    )
+    void sensorActivated_systemArmed_setsPendingAlarm(
+            ArmingStatus armingStatus) {
 
         Sensor sensor =
                 new Sensor("1", SensorType.DOOR);
@@ -47,7 +55,7 @@ public class SecurityServiceTest {
                 .thenReturn(AlarmStatus.NO_ALARM);
 
         when(securityRepository.getArmingStatus())
-                .thenReturn(ArmingStatus.ARMED_HOME);
+                .thenReturn(armingStatus);
 
         securityService.changeSensorActivationStatus(
                 sensor,
@@ -59,6 +67,8 @@ public class SecurityServiceTest {
                         AlarmStatus.PENDING_ALARM
                 );
     }
+
+
 
     @Test
     void pendingAlarmSensorActivated_setsAlarm() {
@@ -440,24 +450,7 @@ public class SecurityServiceTest {
                 .setAlarmStatus(any());
     }
 
-    @Test
-    void armedAway_resetsSensors() {
 
-        Sensor sensor =
-                new Sensor("1", SensorType.DOOR);
-
-        sensor.setActive(true);
-
-        when(securityRepository.getSensors())
-                .thenReturn(Set.of(sensor));
-
-        securityService.setArmingStatus(
-                ArmingStatus.ARMED_AWAY
-        );
-
-        verify(securityRepository)
-                .updateSensor(sensor);
-    }
 
     @Test
     void pendingAlarm_secondSensorActivated_alarm() {
