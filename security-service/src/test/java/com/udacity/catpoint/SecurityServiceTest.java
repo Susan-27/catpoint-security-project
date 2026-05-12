@@ -602,6 +602,31 @@ public class SecurityServiceTest {
         verify(securityRepository, never())
                 .setAlarmStatus(any());
     }
+    @Test
+    void activeSensorSetToActiveWhenPending_setsAlarm() {
+
+        Sensor sensor = new Sensor("Test", SensorType.DOOR);
+        sensor.setActive(true);
+
+        when(securityRepository.getAlarmStatus())
+                .thenReturn(AlarmStatus.PENDING_ALARM);
+
+        securityService.changeSensorActivationStatus(sensor, true);
+
+        verify(securityRepository)
+                .setAlarmStatus(AlarmStatus.ALARM);
+    }
+    @Test
+    void inactiveSensorSetToInactive_noChange() {
+
+        Sensor sensor = new Sensor("Test", SensorType.DOOR);
+        sensor.setActive(false);
+
+        securityService.changeSensorActivationStatus(sensor, false);
+
+        verify(securityRepository, never())
+                .setAlarmStatus(any());
+    }
 
 
 

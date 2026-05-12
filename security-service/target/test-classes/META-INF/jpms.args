@@ -1,0 +1,6 @@
+--add-reads
+security.service=ALL-UNNAMED
+--patch-module
+security.service=_
+--add-reads
+security.service=ALL-UNNAMED
