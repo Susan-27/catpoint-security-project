@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.udacity.catpoint.SecurityServiceTest
 -------------------------------------------------------------------------------
-Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.141 s - in com.udacity.catpoint.SecurityServiceTest
+Tests run: 42, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.165 s - in com.udacity.catpoint.SecurityServiceTest

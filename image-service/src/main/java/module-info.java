@@ -1,4 +1,5 @@
 module image.service {
+
     requires java.desktop;
 
     requires software.amazon.awssdk.regions;
@@ -9,5 +10,7 @@ module image.service {
 
     requires org.slf4j;
 
-    exports com.udacity.imageservice.service to security.service;
+    exports com.udacity.imageservice.service;
+
+    opens com.udacity.imageservice.service;
 }

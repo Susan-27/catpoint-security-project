@@ -6,6 +6,8 @@ import com.udacity.imageservice.service.ImageService;
 import com.udacity.catpoint.service.SecurityService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.awt.image.BufferedImage;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -94,22 +96,7 @@ public class SecurityServiceTest {
                 );
     }
 
-    @Test
-    void armedHome_catDetected_setsAlarm() {
 
-        when(securityRepository.getArmingStatus())
-                .thenReturn(ArmingStatus.ARMED_HOME);
-
-        when(imageService.imageContainsCat(any(), anyFloat()))
-                .thenReturn(true);
-
-        securityService.processImage(null);
-
-        verify(securityRepository)
-                .setAlarmStatus(
-                        AlarmStatus.ALARM
-                );
-    }
 
     @Test
     void armingSystem_resetsAllSensors() {
@@ -626,6 +613,117 @@ public class SecurityServiceTest {
 
         verify(securityRepository, never())
                 .setAlarmStatus(any());
+    }
+    @Test
+    void alarmState_sensorChange_noEffect() {
+
+        Sensor sensor = new Sensor("Test", SensorType.DOOR);
+
+        when(securityRepository.getAlarmStatus())
+                .thenReturn(AlarmStatus.ALARM);
+
+        securityService.changeSensorActivationStatus(sensor, true);
+
+        verify(securityRepository, never())
+                .setAlarmStatus(any());
+    }
+    @Test
+    void armedHome_catDetected_setsAlarm() {
+
+        BufferedImage image =
+                new BufferedImage(100, 100,
+                        BufferedImage.TYPE_INT_RGB);
+
+        when(imageService.imageContainsCat(image, 50.0f))
+                .thenReturn(true);
+
+        when(securityRepository.getArmingStatus())
+                .thenReturn(ArmingStatus.ARMED_HOME);
+
+        securityService.processImage(image);
+
+        verify(securityRepository)
+                .setAlarmStatus(AlarmStatus.ALARM);
+    }
+    @Test
+    void noCat_noActiveSensors_setsNoAlarm() {
+
+        BufferedImage image =
+                new BufferedImage(100, 100,
+                        BufferedImage.TYPE_INT_RGB);
+
+        Sensor sensor = new Sensor("Test", SensorType.DOOR);
+        sensor.setActive(false);
+
+        when(imageService.imageContainsCat(image, 50.0f))
+                .thenReturn(false);
+
+        when(securityRepository.getSensors())
+                .thenReturn(Set.of(sensor));
+
+        securityService.processImage(image);
+
+        verify(securityRepository)
+                .setAlarmStatus(AlarmStatus.NO_ALARM);
+    }
+    @Test
+    void activeSensorActivatedAgain_setsAlarm() {
+
+        Sensor sensor = new Sensor("Test", SensorType.DOOR);
+        sensor.setActive(true);
+
+        when(securityRepository.getAlarmStatus())
+                .thenReturn(AlarmStatus.PENDING_ALARM);
+
+        securityService.changeSensorActivationStatus(sensor, true);
+
+        verify(securityRepository)
+                .setAlarmStatus(AlarmStatus.ALARM);
+    }
+    @Test
+    void inactiveSensorDeactivatedAgain_noChange() {
+
+        Sensor sensor = new Sensor("Test", SensorType.DOOR);
+        sensor.setActive(false);
+
+        securityService.changeSensorActivationStatus(sensor, false);
+
+        verify(securityRepository, never())
+                .setAlarmStatus(any());
+    }
+    @Test
+    void sensorActivated_whenAlreadyAlarm_noChange() {
+
+        Sensor sensor = new Sensor("Test", SensorType.DOOR);
+
+        when(securityRepository.getAlarmStatus())
+                .thenReturn(AlarmStatus.ALARM);
+
+        when(securityRepository.getArmingStatus())
+                .thenReturn(ArmingStatus.ARMED_HOME);
+
+        securityService.changeSensorActivationStatus(sensor, true);
+
+        verify(securityRepository, never())
+                .setAlarmStatus(AlarmStatus.PENDING_ALARM);
+    }
+    @Test
+    void catDetection_notifiesListeners() {
+
+        StatusListener listener = mock(StatusListener.class);
+
+        securityService.addStatusListener(listener);
+
+        BufferedImage image =
+                new BufferedImage(100, 100,
+                        BufferedImage.TYPE_INT_RGB);
+
+        when(imageService.imageContainsCat(image, 50.0f))
+                .thenReturn(true);
+
+        securityService.processImage(image);
+
+        verify(listener).catDetected(true);
     }
 
 
