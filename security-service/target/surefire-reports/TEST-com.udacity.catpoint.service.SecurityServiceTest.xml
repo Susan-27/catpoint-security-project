@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.udacity.catpoint.service.SecurityServiceTest" time="1.704" tests="34" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.udacity.catpoint.service.SecurityServiceTest" time="1.745" tests="34" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\ELCOT\AppData\Local\Temp\surefire17986313697002509264\surefirebooter-20260511212505187_3.jar C:\Users\ELCOT\AppData\Local\Temp\surefire17986313697002509264 2026-05-11T21-24-59_120-jvmRun1 surefire-20260511212505187_1tmp surefire_0-20260511212505187_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\ELCOT\AppData\Local\Temp\surefire6907823292677448368\surefirebooter-20260512202747844_3.jar C:\Users\ELCOT\AppData\Local\Temp\surefire6907823292677448368 2026-05-12T20-27-44_787-jvmRun1 surefire-20260512202747844_1tmp surefire_0-20260512202747844_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\ELCOT\Downloads\cd0384-java-application-deployment-projectstarter-master\cd0384-java-application-deployment-projectstarter-master\starter\catpoint-parent\security-service\target\test-classes;C:\Users\ELCOT\Downloads\cd0384-java-application-deployment-projectstarter-master\cd0384-java-application-deployment-projectstarter-master\starter\catpoint-parent\security-service\target\classes;C:\Users\ELCOT\Downloads\cd0384-java-application-deployment-projectstarter-master\cd0384-java-application-deployment-projectstarter-master\starter\catpoint-parent\image-service\target\image-service-1.0-SNAPSHOT.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\rekognition\2.25.28\rekognition-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\aws-json-protocol\2.25.28\aws-json-protocol-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\third-party-jackson-core\2.25.28\third-party-jackson-core-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\protocol-core\2.25.28\protocol-core-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\http-auth-aws\2.25.28\http-auth-aws-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\checksums-spi\2.25.28\checksums-spi-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\checksums\2.25.28\checksums-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\sdk-core\2.25.28\sdk-core-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\profiles\2.25.28\profiles-2.25.28.jar;C:\Users\ELCOT\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\auth\2.25.28\auth-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\eventstream\eventstream\1.0.1\eventstream-1.0.1.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\http-auth-spi\2.25.28\http-auth-spi-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\http-auth\2.25.28\http-auth-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\identity-spi\2.25.28\identity-spi-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\http-client-spi\2.25.28\http-client-spi-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\regions\2.25.28\regions-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\annotations\2.25.28\annotations-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\utils\2.25.28\utils-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\aws-core\2.25.28\aws-core-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\metrics-spi\2.25.28\metrics-spi-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\json-utils\2.25.28\json-utils-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\endpoints-spi\2.25.28\endpoints-spi-2.25.28.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\apache-client\2.25.28\apache-client-2.25.28.jar;C:\Users\ELCOT\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\ELCOT\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ELCOT\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\ELCOT\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\ELCOT\.m2\repository\software\amazon\awssdk\netty-nio-client\2.25.28\netty-nio-client-2.25.28.jar;C:\Users\ELCOT\.m2\repository\io\netty\netty-codec-http\4.1.108.Final\netty-codec-http-4.1.108.Final.jar;C:\Users\ELCOT\.m2\repository\io\netty\netty-codec-http2\4.1.108.Final\netty-codec-http2-4.1.108.Final.jar;C:\Users\ELCOT\.m2\repository\io\netty\netty-codec\4.1.108.Final\netty-codec-4.1.108.Final.jar;C:\Users\ELCOT\.m2\repository\io\netty\netty-transport\4.1.108.Final\netty-transport-4.1.108.Final.jar;C:\Users\ELCOT\.m2\repository\io\netty\netty-common\4.1.108.Final\netty-common-4.1.108.Final.jar;C:\Users\ELCOT\.m2\repository\io\netty\netty-buffer\4.1.108.Final\netty-buffer-4.1.108.Final.jar;C:\Users\ELCOT\.m2\repository\io\netty\netty-handler\4.1.108.Final\netty-handler-4.1.108.Final.jar;C:\Users\ELCOT\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.108.Final\netty-transport-native-unix-common-4.1.108.Final.jar;C:\Users\ELCOT\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.108.Final\netty-transport-classes-epoll-4.1.108.Final.jar;C:\Users\ELCOT\.m2\repository\io\netty\netty-resolver\4.1.108.Final\netty-resolver-4.1.108.Final.jar;C:\Users\ELCOT\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\ELCOT\.m2\repository\com\miglayout\miglayout-swing\11.0\miglayout-swing-11.0.jar;C:\Users\ELCOT\.m2\repository\com\miglayout\miglayout-core\11.0\miglayout-core-11.0.jar;C:\Users\ELCOT\.m2\repository\org\slf4j\slf4j-simple\2.0.9\slf4j-simple-2.0.9.jar;C:\Users\ELCOT\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\ELCOT\.m2\repository\com\google\guava\guava\32.1.2-jre\guava-32.1.2-jre.jar;C:\Users\ELCOT\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\ELCOT\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ELCOT\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ELCOT\.m2\repository\org\checkerframework\checker-qual\3.33.0\checker-qual-3.33.0.jar;C:\Users\ELCOT\.m2\repository\com\google\errorprone\error_prone_annotations\2.18.0\error_prone_annotations-2.18.0.jar;C:\Users\ELCOT\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\ELCOT\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.3\junit-jupiter-5.9.3.jar;C:\Users\ELCOT\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\ELCOT\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ELCOT\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\ELCOT\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ELCOT\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.3\junit-jupiter-params-5.9.3.jar;C:\Users\ELCOT\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\ELCOT\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\ELCOT\.m2\repository\org\mockito\mockito-core\5.5.0\mockito-core-5.5.0.jar;C:\Users\ELCOT\.m2\repository\net\bytebuddy\byte-buddy\1.14.6\byte-buddy-1.14.6.jar;C:\Users\ELCOT\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.6\byte-buddy-agent-1.14.6.jar;C:\Users\ELCOT\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="javax.accessibility.screen_magnifier_present" value="true"/>
-    <property name="surefire.real.class.path" value="C:\Users\ELCOT\AppData\Local\Temp\surefire17986313697002509264\surefirebooter-20260511212505187_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\ELCOT\AppData\Local\Temp\surefire6907823292677448368\surefirebooter-20260512202747844_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
@@ -58,38 +58,38 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="getArmingStatus_returnsStatus" classname="com.udacity.catpoint.service.SecurityServiceTest" time="1.506"/>
-  <testcase name="setAlarmStatus_notifiesListeners" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.056"/>
+  <testcase name="getArmingStatus_returnsStatus" classname="com.udacity.catpoint.service.SecurityServiceTest" time="1.527"/>
+  <testcase name="setAlarmStatus_notifiesListeners" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.059"/>
   <testcase name="pendingAlarmInactiveSensors_noAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.008"/>
-  <testcase name="catDetected_disarmed_noAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.007"/>
+  <testcase name="catDetected_disarmed_noAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.009"/>
   <testcase name="getAlarmStatus_returnsStatus" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
   <testcase name="addSensor_addsSensor" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
-  <testcase name="inactiveSensorDeactivated_noChange" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
+  <testcase name="inactiveSensorDeactivated_noChange" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.004"/>
   <testcase name="armedSensorActivated_setsPendingAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
-  <testcase name="removeStatusListener_removesListener" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.002"/>
-  <testcase name="armedHome_catDetected_setsAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
-  <testcase name="processImage_catDetectedAway_noAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.002"/>
-  <testcase name="noCatAndNoActiveSensors_setsNoAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
+  <testcase name="removeStatusListener_removesListener" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
+  <testcase name="armedHome_catDetected_setsAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.004"/>
+  <testcase name="processImage_catDetectedAway_noAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
+  <testcase name="noCatAndNoActiveSensors_setsNoAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.004"/>
   <testcase name="noCat_activeSensors_noAlarmChange" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
-  <testcase name="getSensors_returnsSensors" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.004"/>
-  <testcase name="getAlarmStatus_returnsAlarmStatus" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.002"/>
-  <testcase name="pendingAlarm_secondSensorActivated_alarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.004"/>
-  <testcase name="pendingAlarmActiveSensor_alarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.002"/>
-  <testcase name="armedHomeWithCat_setsAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.004"/>
+  <testcase name="getSensors_returnsSensors" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.007"/>
+  <testcase name="getAlarmStatus_returnsAlarmStatus" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
+  <testcase name="pendingAlarm_secondSensorActivated_alarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
+  <testcase name="pendingAlarmActiveSensor_alarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
+  <testcase name="armedHomeWithCat_setsAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
   <testcase name="pendingAlarmSensorActivated_setsAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
-  <testcase name="activeSensorActivatedWhilePending_setsAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
+  <testcase name="activeSensorActivatedWhilePending_setsAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.002"/>
   <testcase name="setAlarmStatus_setsAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
-  <testcase name="inactiveSensor_noAlarm_noChange" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.002"/>
+  <testcase name="inactiveSensor_noAlarm_noChange" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
   <testcase name="disarm_setsNoAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
-  <testcase name="removeSensor_removesSensor" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.001"/>
+  <testcase name="removeSensor_removesSensor" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.002"/>
   <testcase name="pendingAlarm_allSensorsInactive_setsNoAlarm" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
   <testcase name="alarmState_sensorChanges_noEffect" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
-  <testcase name="processImage_noCat_activeSensors_noChange" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.002"/>
+  <testcase name="processImage_noCat_activeSensors_noChange" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
   <testcase name="armingSystem_resetsAllSensors" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
-  <testcase name="disarmedSensorActivation_noAlarmChange" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
-  <testcase name="addStatusListener_addsListener" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.001"/>
+  <testcase name="disarmedSensorActivation_noAlarmChange" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.002"/>
+  <testcase name="addStatusListener_addsListener" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
   <testcase name="alarmState_activeSensor_noChange" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
   <testcase name="getArmingStatus_returnsArmingStatus" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.002"/>
-  <testcase name="armedAway_resetsSensors" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
-  <testcase name="setAlarmStatus_notifiesAllListeners" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.003"/>
+  <testcase name="armedAway_resetsSensors" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.002"/>
+  <testcase name="setAlarmStatus_notifiesAllListeners" classname="com.udacity.catpoint.service.SecurityServiceTest" time="0.002"/>
 </testsuite>

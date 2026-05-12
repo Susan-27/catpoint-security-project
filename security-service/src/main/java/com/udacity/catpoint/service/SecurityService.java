@@ -44,11 +44,11 @@ public class SecurityService {
 
         } else {
 
-            securityRepository.getSensors()
-                    .forEach(sensor -> {
-                        sensor.setActive(false);
-                        securityRepository.updateSensor(sensor);
-                    });
+            Set<Sensor> sensors = new HashSet<>(securityRepository.getSensors());
+
+            for (Sensor sensor : sensors) {
+                changeSensorActivationStatus(sensor, false);
+            }
         }
 
         securityRepository.setArmingStatus(armingStatus);
