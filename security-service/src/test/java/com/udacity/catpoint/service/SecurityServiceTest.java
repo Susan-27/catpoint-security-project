@@ -150,28 +150,20 @@ public class SecurityServiceTest {
     @Test
     void pendingAlarm_allSensorsInactive_setsNoAlarm() {
 
-        Sensor sensor =
-                new Sensor("1", SensorType.DOOR);
+        Sensor sensor = new Sensor("Test Sensor", SensorType.DOOR);
 
-        sensor.setActive(false);
-
+        sensor.setActive(true);
         when(securityRepository.getAlarmStatus())
                 .thenReturn(AlarmStatus.PENDING_ALARM);
 
         when(securityRepository.getSensors())
                 .thenReturn(Set.of(sensor));
 
-        securityService.changeSensorActivationStatus(
-                sensor,
-                false
-        );
+        securityService.changeSensorActivationStatus(sensor, false);
 
         verify(securityRepository)
-                .setAlarmStatus(
-                        AlarmStatus.NO_ALARM
-                );
+                .setAlarmStatus(AlarmStatus.NO_ALARM);
     }
-
     @Test
     void inactiveSensorDeactivated_noChange() {
 
@@ -559,26 +551,19 @@ public class SecurityServiceTest {
     @Test
     void pendingAlarmInactiveSensors_noAlarm() {
 
-        Sensor sensor =
-                new Sensor("1", SensorType.DOOR);
+        Sensor sensor = new Sensor("Test Sensor", SensorType.DOOR);
 
-        sensor.setActive(false);
-
+        sensor.setActive(true);
         when(securityRepository.getAlarmStatus())
                 .thenReturn(AlarmStatus.PENDING_ALARM);
 
         when(securityRepository.getSensors())
                 .thenReturn(Set.of(sensor));
 
-        securityService.changeSensorActivationStatus(
-                sensor,
-                false
-        );
+        securityService.changeSensorActivationStatus(sensor, false);
 
         verify(securityRepository)
-                .setAlarmStatus(
-                        AlarmStatus.NO_ALARM
-                );
+                .setAlarmStatus(AlarmStatus.NO_ALARM);
     }
     @Test
     void pendingAlarmActiveSensor_alarm() {
@@ -605,24 +590,15 @@ public class SecurityServiceTest {
     @Test
     void disarmedSensorActivation_noAlarmChange() {
 
-        Sensor sensor =
-                new Sensor("1", SensorType.DOOR);
-
-        when(securityRepository.getAlarmStatus())
-                .thenReturn(AlarmStatus.NO_ALARM);
+        Sensor sensor = new Sensor("Test Sensor", SensorType.DOOR);
 
         when(securityRepository.getArmingStatus())
                 .thenReturn(ArmingStatus.DISARMED);
 
-        securityService.changeSensorActivationStatus(
-                sensor,
-                true
-        );
+        securityService.changeSensorActivationStatus(sensor, true);
 
-        verify(securityRepository)
-                .setAlarmStatus(
-                        AlarmStatus.PENDING_ALARM
-                );
+        verify(securityRepository, never())
+                .setAlarmStatus(any());
     }
 
 

@@ -1,6 +1,7 @@
 com\udacity\catpoint\data\SensorType.class
 com\udacity\catpoint\application\ControlPanel.class
 com\udacity\catpoint\data\PretendDatabaseSecurityRepositoryImpl.class
+com\udacity\catpoint\service\SecurityService$1.class
 com\udacity\catpoint\data\ArmingStatus.class
 com\udacity\catpoint\application\ImagePanel.class
 com\udacity\catpoint\application\StatusListener.class
