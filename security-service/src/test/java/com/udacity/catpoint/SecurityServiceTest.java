@@ -1,7 +1,9 @@
-package com.udacity.catpoint.service;
+package com.udacity.catpoint;
 
 import com.udacity.catpoint.application.StatusListener;
 import com.udacity.catpoint.data.*;
+import com.udacity.imageservice.service.ImageService;
+import com.udacity.catpoint.service.SecurityService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.Set;

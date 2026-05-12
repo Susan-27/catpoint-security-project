@@ -89,6 +89,20 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+
+                <configuration>
+                    <release>17</release>
+                    <compilerArgs>
+                        <arg>--add-reads</arg>
+                        <arg>security.service=ALL-UNNAMED</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
         </plugins>
 
     </build>

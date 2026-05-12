@@ -1,2 +1,3 @@
-com\udacity\catpoint\service\AwsImageService.class
-com\udacity\catpoint\service\ImageService.class
+com\udacity\imageservice\service\AwsImageService.class
+com\udacity\imageservice\service\ImageService.class
+module-info.class
